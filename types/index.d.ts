@@ -270,6 +270,23 @@ declare namespace Omise {
       metadata: { [key: string]: any };
       source?: Sources.ISource;
       status: string;
+      acquirer_reference_number: string;
+      fee: number;
+      fee_vat: number;
+      funding_amount: number;
+      funding_currency: string;
+      merchant_advice?: string;
+      merchant_name?: string;
+      merchant_uid?: string;
+      partially_refundable: boolean;
+      transaction_fees: string | ITransactionFee;
+      unmanaged_payment?: any;
+    }
+
+    interface ITransactionFee {
+      fee_flat: string;
+      fee_rate: string;
+      vat_rate: string;
     }
 
     interface IListRefundResponse extends IOccurrences {
