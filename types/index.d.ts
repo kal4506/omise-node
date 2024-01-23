@@ -269,6 +269,7 @@ declare namespace Omise {
       zero_interest_installments: boolean;
       metadata: { [key: string]: any };
       source?: Sources.ISource;
+      status: string;
     }
 
     interface IListRefundResponse extends IOccurrences {
